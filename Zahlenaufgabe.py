@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#pythoncheck
 
 n = input("Eine ganze Zahl zwischen 0 und 100: ")
 
@@ -34,7 +34,7 @@ if len(n) == 2:
             
             zus_1 = ""
             
-            #falls keine "Zehnerzahl", definiere Füllwort als "und"
+            #Füllwort "und" für Zahlen die größer als 20 und keine Zehnerzahlen sind
             if e != "0" and z != "1":
                 zus_1 = "und"
             
