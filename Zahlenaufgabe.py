@@ -5,7 +5,7 @@ n = input("Eine ganze Zahl zwischen 0 und 100: ")
 #auf , oder . prüfen
 if "," in n or "." in n:
     
-    n = input ("Bitte geben Sie Ihre Zahl oder Dezimalstellen ein: ")
+    n = input ("Bitte geben Sie Ihre Zahl ohne Dezimalstellen ein: ")
 
 #einstellige Zahlen
 if len(n) == 1:
