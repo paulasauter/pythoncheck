@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu May 27 09:43:19 2021
-
-@author: paula
-"""
 
 n = input("Eine ganze Zahl zwischen 0 und 100: ")
+
+#auf , oder . prüfen
+if "," in n or "." in n:
+    
+    n = input ("Bitte geben Sie Ihre Zahl oder Dezimalstellen ein: ")
 
 #einstellige Zahlen
 if len(n) == 1:
@@ -16,16 +16,18 @@ if len(n) == 1:
 #zweistellige Zahlen
 if len(n) == 2:
         
-        if n == "11" or n == "12" or n == "16":
+        #Ausnahmen
+        if n == "11" or n == "12" or n == "16" or n == "17":
             
-            dict = {"11":"elf", "12":"zwölf", "16":"sechzehn"}
+            dict = {"11":"elf", "12":"zwölf", "16":"sechzehn", "17" : "siebzehn"}
             
             print(dict[n])
-            
+       
+        #regelmäßige Zahlen    
         else:
             z = n[0]
             e = n[1]
-            
+           
             #Wort für Einerziffer
             dict_e = {"0" : "", "1" : "ein", "2" : "zwei", "3" : "drei", "4" : "vier", "5" : "fünf", "6" : "sechs", "7" : "sieben", "8" : "acht", "9" : "neun"}
             e_out = dict_e[e]
@@ -33,7 +35,7 @@ if len(n) == 2:
             zus_1 = ""
             
             #falls keine "Zehnerzahl", definiere Füllwort als "und"
-            if e != "0":
+            if e != "0" and z != "1":
                 zus_1 = "und"
             
             #Wort für Zehnerziffer
@@ -44,6 +46,9 @@ if len(n) == 2:
             output = e_out + zus_1 + z_out
             print(output)
         
-#dreistellige Zahlen (100)
+#dreistellige Zahlen
 if len(n) == 3:
-        print("einhundert")
+        if n == "100":
+            print("einhundert")
+        else:
+            print("Die Zahl liegt nicht zwischen 0 und 100")
